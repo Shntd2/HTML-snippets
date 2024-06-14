@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<script>
+function validateForm() {
+    let username = document.forms["regForm"]["username"].value;
+    if (username.length < 5) {
+        alert("Username must be at least 5 characters long.");
+        return false;
+    }
+    let email = document.forms["regForm"]["email"].value;
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(pattern)) {
+        alert("Invalid email format.");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+<form name="regForm" onsubmit="return validateForm()" method="post">
+    Username: <input type="text" name="username" required><br>
+    Email: <input type="email" name="email" required><br>
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>
