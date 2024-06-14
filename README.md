@@ -1,5 +1,7 @@
 # Basic-HTML
 
-This repository contains basic HTML code snippets which were created for educational perposes. Each of them contains one functionality
+* This repository contains basic HTML code snippets created for educational purposes
 
-You can find suitable attribute/function test by names of files
+* Each snippet focuses on a specific functionality
+
+* You can find suitable attribute/function test using file names
