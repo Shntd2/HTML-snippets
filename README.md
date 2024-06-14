@@ -1,4 +1,4 @@
-# Basic-HTML
+# HTML-snippets
 
 * This repository contains basic HTML code snippets created for educational purposes
 
