@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiding elements test</title>
+</head>
+<body>
+    <h1>Hiding elements test</h1>
+    <p id="hiddenParagraph">This paragraph will disappear after clicking the button</p>
+    <button type="button" id="toggleButton">Click me</button>
+    <script>
+        const button = document.getElementById("toggleButton");
+        const paragraph = document.getElementById("hiddenParagraph");
+
+        button.addEventListener("click", () => {
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
