@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Input test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to the external CSS file -->
+        <link rel="custom_browser_input" type="text/css" href="\custom_browser_input.css">
+        <title>
+            Select test in list and custom input variety
+        </title>
     </head>
     <body>
-        <input type="text" name="browsers" list="browserList">
-        <datalist id="browserList">
-            <option value="Chrome">
-            <option value="Firefox">
-            <option value="Safari">
-            <option value="Edge">
-        </datalist>
+        <label for="browserSelect">Choose your browser:</label>
+        <select id="browserSelect" name="browsers">
+            <!-- *disabled* attribute makes this option unselectable.
+            Users cannot choose this option as a valid entry from the dropdown list
+            *selected* attribute sets this option as the default, pre-selected choice when the page loads.
+            It appears as the initially visible option in the dropdown -->
+            <option value="" disabled selected></option>
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+            <option value="Edge">Edge</option>
+            <option value="Other">Other...</option>
+            </select>
+            <br>
+
+            <div id="customInputContainer">
+                <!-- this block will execute only after
+                 choosing 'Other' option in browserSelect block with help of CSS and JS parts -->
+                <label for="customBrowserInput">Specify your browser:</label>
+                <input type="text" id="customBrowserInput" name="customBrowser" maxlength="15" />
+            </div>
+            <br>
+
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <!-- link to the external JS file -->
+            <script src="\list_test.js"></script>
     </body>
 </html>
