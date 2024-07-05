@@ -14,7 +14,7 @@
             console.log('Prompting for password');
             password = prompt('Enter a password (must be at least 6 characters): ');
             console.log(`Password length: ${password.length}`);
-        } while (password.length < 6);
+        } while (password.length <= 6);
 
         console.log('Exiting do-while loop');
         console.log('Valid password entered');
