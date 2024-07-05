@@ -6,15 +6,18 @@
     <title>Do while JS loop test</title>
 </head>
 <body>
+    <div id="output"></div>
+
     <script>
         let choice;
+        const outputDiv = document.getElementById('output');
+
+        outputDiv.innerHTML += '<p>Menu:</p>';
+        outputDiv.innerHTML += '<p>1. Option 1</p>';
+        outputDiv.innerHTML += '<p>2. Option 2</p>';
+        outputDiv.innerHTML += '<p>3. Exit</p>';
 
         do {
-            console.log('Menu:');
-            console.log('1. Option 1');
-            console.log('2. Option 2');
-            console.log('3. Exit');
-
             choice = prompt(`Enter your choice:
                             1. Option 1
                             2. Option 2
@@ -22,16 +25,16 @@
 
             switch (choice) {
                 case '1':
-                    console.log('Executing Option 1...');
+                    outputDiv.innerHTML += '<p>Executing Option 1...</p>';
                     break;
                 case '2':
-                    console.log('Executing Option 2...');
+                    outputDiv.innerHTML += '<p>Executing Option 2...</p>';
                     break;
                 case '3':
-                    console.log('Exiting program...');
+                    outputDiv.innerHTML += '<p>Exiting program...</p>';
                     break;
                 default:
-                    console.log('Invalid choice. Please try again.');
+                    outputDiv.innerHTML += '<p>Invalid choice. Please try again</p>';
             }
         } while (choice !== '3');
     </script>
