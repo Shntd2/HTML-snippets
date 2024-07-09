@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS onclick Event Test</title>
+</head>
+<body>
+    <h1>This is JS onclick Event Test</h1>
+    <button id="timeButton">Current time</button>
+    <p id="timeTag"></p>
+    <button id="dateButton">Current date</button>
+    <p id="dateTag"></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const timeButton = document.getElementById('timeButton');
+            const dateButton = document.getElementById('dateButton');
+            const timeTag = document.getElementById('timeTag');
+            const dateTag = document.getElementById('dateTag');
+
+            timeButton.addEventListener('click', () => {
+                if (timeTag.innerHTML === "") {
+                    timeTag.innerHTML = new Date().toLocaleTimeString();
+                } else {
+                    timeTag.innerHTML = "";
+                }
+            });
+
+            dateButton.addEventListener('click', () => {
+                const today = new Date();
+                if (dateTag.innerHTML === "") {
+                    dateTag.innerHTML = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+                } else {
+                    dateTag.innerHTML = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

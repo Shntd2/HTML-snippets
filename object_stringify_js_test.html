@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Stringify JS Test</title>
+</head>
+<body>
+    <h1>Object Stringify JS Test</h1>
+    <h2>This is a test of JSON.stringify() method related to object in JavaScript</h2>
+    <p id="objectResult"></p>
+    <script>
+        const fruits = {
+            apple: "red",
+            banana: "yellow",
+            orange: "orange"
+        };
+
+        let fruitsString = JSON.stringify(fruits);
+        document.getElementById("objectResult").innerHTML = fruitsString;
+    </script>
+</body>
+</html>
