@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload JS event test</title>
+</head>
+<body onload="displayWelcomeMessage()">
+    <h1>Welcome to the onload JS event example</h1>
+    <h2 id="welcomeMessage"></h2>
+
+    <script>
+        function displayWelcomeMessage() {
+            const messageElement = document.getElementById('welcomeMessage');
+            messageElement.textContent = 'Page has fully loaded';
+        }
+    </script>
+</body>
+</html>

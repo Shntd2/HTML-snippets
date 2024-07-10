@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseover Event Test</title>
+</head>
+<body>
+    <h1>Hover over the button test with onmouseover event</h1>
+    <button id="hoverButton" onmouseover="displayHoverMessage()" onmouseout="removeHoverMessage()">Hover over me</button>
+    <p id="hoverMessage"></p>
+    <script>
+        function displayHoverMessage() {
+            const messageElement = document.getElementById("hoverMessage");
+            messageElement.innerHTML = "You have hovered over the button";
+        }
+
+        function removeHoverMessage() {
+            const messageRemover = document.getElementById("hoverMessage");
+            messageRemover.innerHTML = "";
+        }
+    </script>
+</body>
+</html>

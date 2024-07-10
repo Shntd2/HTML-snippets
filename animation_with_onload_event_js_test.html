@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading animation with onload JS event test</title>
+
+    <style>
+        #animateBox {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: calc(50vh - 50px);
+            left: calc(50vw - 50px);
+            transition: top 2s;
+        }
+    </style>
+
+</head>
+<body onload="startAnimation()">
+
+    <h2>Start animation test</h2>
+    <div id="animateBox"></div>
+
+    <script>
+        function startAnimation() {
+            document.getElementById('animateBox').style.top = '300px';
+        }
+    </script>
+
+</body>
+</html>

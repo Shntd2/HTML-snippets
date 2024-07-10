@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeydown JS event test</title>
+</head>
+<body>
+    <h1>This is onkeydown JS event test</h1>
+    <h2>Press a key while focused on the input field</h2>
+    <input type="text" id="textInput" onkeydown="displayKeyCode(event)">
+    <p id="keyCodeDisplay"></p>
+    <script>
+        function displayKeyCode(event) {
+            const display = document.getElementById("keyCodeDisplay");
+            display.textContent = `Key pressed: ${event.key} (Code: ${event.keyCode})`;
+        }
+    </script>
+</body>
+</html>

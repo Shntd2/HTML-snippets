@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent Example</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="header">Hello, <span>World!</span></h1>
+    <button onclick="updateText()">Update Text</button>
+    <script>
+        function updateText() {
+            const header = document.getElementById('header');
+            console.log('Original text content:', header.textContent);
+            header.textContent = 'New text content';
+            console.log('Updated text content:', header.textContent);
+        }
+    </script>
+</body>
+</html>

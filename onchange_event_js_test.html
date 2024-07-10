@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange Event Example</title>
+</head>
+<body>
+    <h1>Choose a fruit</h1>
+    <select id="fruitSelect" onchange="displaySelectedFruit()">
+        <option value=""></option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+        <option value="orange">Orange</option>
+    </select>
+    <p id="resultElement"></p>
+    <script>
+        function displaySelectedFruit() {
+            const selectElement = document.getElementById("fruitSelect");
+            const resultElement = document.getElementById("resultElement");
+            const selectedFruit = selectElement.value;
+            resultElement.innerHTML = `You have chosen ${selectedFruit}`;
+        }
+    </script>
+</body>
+</html>
