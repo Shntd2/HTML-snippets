@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array for loop JS test</title>
+</head>
+<body>
+    <h1>This is array for loop JS test</h1>
+    <p id="listDescription"></p>
+    <p id="theList"></p>
+
+    <script>
+        let description = 'Fruits in our garden: ';
+        const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+        let fruitsLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fruitsLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("theList").innerHTML = text;
+        document.getElementById("listDescription").innerHTML = description;
+    </script>
+
+</body>
+</html>

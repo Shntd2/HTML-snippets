@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array forEach() func test JS</title>
+</head>
+<body>
+    <h1>This is array forEach() func test JS</h1>
+    <p id="listDescription"></p>
+    <p id="fruitsList"></p>
+
+    <script>
+        const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+        let fruitListDescription = 'Fruits in our garden: ';
+
+        document.getElementById("listDescription").innerHTML = fruitListDescription;
+
+        let text = "<ul>";
+        fruits.forEach(fruitsIterator);
+        text += "</ul>";
+
+        document.getElementById("fruitsList").innerHTML = text;
+
+        function fruitsIterator(fruit) {
+            text += "<li>" + fruit + "</li>";
+        }
+    </script>
+
+</body>
+</html>
